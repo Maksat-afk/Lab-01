@@ -1,16 +1,19 @@
-import FragmentOnlyLayout from "./Fragment-Only Layout";
-import MappingArrayToList from "./Mapping_Array_to_List";
-import CombinedFragmentList from "./Combined_Fragment_List";
+import { useState } from 'react';
+import './App.css';
 
 function App() {
+    const [isHighlighted, setIsHighlighted] = useState(false);
+
     return (
-        <>
-            <FragmentOnlyLayout />
-            <hr />
-            <MappingArrayToList />
-            <hr />
-            <CombinedFragmentList />
-        </>
+        <div>
+            <button onClick={() => setIsHighlighted(!isHighlighted)}>
+                Переключить подсветку
+            </button>
+
+            <p className={isHighlighted ? 'highlighted' : ''}>
+                Этот текст будет подсвечиваться при нажатии на кнопку.
+            </p>
+        </div>
     );
 }
 
