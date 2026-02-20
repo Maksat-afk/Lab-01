@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Императивный подход</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+        <style>
+            .highlight {
+                background: yellow;
+            }
+        </style>
+    </head>
+    <body>
+
+        <button id="toggleBtn">Toggle Highlight</button>
+        <p id="text">This is some text that will be highlighted.</p>
+
+        <script>
+            $('#toggleBtn').click(function() {
+                $('#text').toggleClass('highlight');
+            });
+        </script>
+
+    </body>
+</html>
